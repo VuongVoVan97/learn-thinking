@@ -1,34 +1,47 @@
 package vu.excercise.day1;
 
+import java.util.Calendar;
+
 public class Level_1 {
 
     public static void main(String[] args) {
 
-
+        excercise1(10, 20);
+        System.out.println(excercise2(1997));
+        System.out.println(excercise3(14,15));
     }
 
-    public static void contans (int a, int b ){
-     int temp = b;
-     b = a;
-     a = temp;
-        System.out.println(a);
-        System.out.println(b);
+    public static void excercise1(int a, int b ){
 
+        System.out.println("a ban dau: " + a);
+        System.out.println("b ban dau: "+ b);
 
+        int temp = b;
+
+        b = a;
+        a = temp;
+
+        System.out.println("a hoan vi: " + a);
+        System.out.println("b hoan vi: " + b);
 
     }
-    public static int calulate (int birthYear, int currentYear ) {
+    public static int excercise2(int birthYear) {
 
-        int rr = currentYear - birthYear;
+        int year;
 
-     return rr;
+        Calendar x = Calendar.getInstance();
+        //year sẽ là năm hien tai
+        year = x.get(Calendar.YEAR);
+
+        return year - birthYear;
     }
 
-    public static int maxnumber (int a,int b){
-        if (a > b){
+    public static int excercise3(int a, int b){
+
+        if (a > b) {
             return a;
-
         }
+
         return b;
     }
 
@@ -49,7 +62,7 @@ public class Level_1 {
     You are 26 years old*/
 
 
-    /*Exercise 4 — Compare two numbers
+    /*Exercise 3 — Compare two numbers
     int a = 15;
     int b = 8;
     15 is greater
